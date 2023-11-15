@@ -25,11 +25,8 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Rename build artifacts
-        run: mv target/*.jar target/QuickSell.jar
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: QuickSell
-          path: target/QuickSell.jar
+          path: target/quicksell-v2.3.4.jar
